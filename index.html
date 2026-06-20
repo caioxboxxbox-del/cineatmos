@@ -1,159 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cine Atmos</title>
-  <style>
-    :root{
-      --bg:#121212;
-      --text:#dcdcdc;
-      --accent:#6bd17a;
-      --muted:#a6a6a6;
-      --maxw:900px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-    }
-
-    .container{
-      max-width:var(--maxw);
-      margin:40px auto;
-      padding:28px 20px;
-      text-align:center;
-    }
-
-    .topbar{
-      display:flex;
-      justify-content:flex-end;
-      gap:12px;
-      align-items:center;
-      margin-bottom:-18px;
-    }
-    .wa-top{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:rgba(107,209,122,0.08);
-      padding:6px 10px;
-      border-radius:999px;
-      color:var(--accent);
-      font-weight:600;
-      text-decoration:none;
-      border:1px solid rgba(107,209,122,0.12);
-      font-size:14px;
-    }
-
-    h1{
-      margin:22px 0 6px;
-      font-size:44px;
-      color:var(--accent);
-    }
-    .subtitle{
-      color:var(--muted);
-      font-size:15px;
-      margin-bottom:18px;
-    }
-
-    .hero{
-      margin-top:18px;
-      padding:26px 18px;
-    }
-
-    .big{
-      color:var(--accent);
-      font-size:30px;
-      font-weight:700;
-      margin:18px 0;
-    }
-
-    .info{
-      color:var(--muted);
-      font-size:15px;
-      margin:12px 0 22px;
-      line-height:1.6;
-    }
-
-    .devices{
-      font-weight:700;
-      background:linear-gradient(0deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));
-      padding:10px 14px;
-      border-radius:8px;
-      display:inline-block;
-      margin-bottom:22px;
-      color:var(--text);
-    }
-
-    .cta{
-      display:inline-block;
-      text-decoration:none;
-      background:var(--accent);
-      color:#07120b;
-      padding:14px 30px;
-      border-radius:12px;
-      font-size:18px;
-      font-weight:700;
-      box-shadow:0 6px 18px rgba(11,25,11,0.28);
-      transition:transform .12s ease, box-shadow .12s;
-    }
-    .cta:active{ transform:translateY(1px) }
-    .cta:hover{ box-shadow:0 10px 26px rgba(11,25,11,0.34) }
-
-    footer{
-      margin-top:40px;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    @media (max-width:520px){
-      h1{ font-size:34px }
-      .big{ font-size:22px }
-      .container{ margin:18px auto; padding:18px 14px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Atmos</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #111; color: #fff; margin: 0; padding: 0; }
+        .container { margin: 18px auto; padding: 18px 14px; }
+        .wa-top { display: inline-block; background-color: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="topbar">
-      <!-- Top WhatsApp quick link (abre o WhatsApp) -->
-      <a class="wa-top"
-         https://wa.me/5582987533532?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20teste%20gr%C3%A1tis%20no%20Cine%20Atmos
-         target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
-        🟢 WhatsApp
-      </a>
+    <div class="container">
+        <div class="topbar">
+            <!-- Top WhatsApp quick link (abre o WhatsApp) -->
+            <a class="wa-top" href="https://wa.me/5582987533532?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20teste%20gr%C3%A1tis%20no%20Cine%20Atmos" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+                WhatsApp
+            </a>
+        </div>
     </div>
-
-    <header class="hero" role="banner" aria-label="Cine Atmos - descrição">
-      <h1>Cine Atmos</h1>
-      <p class="subtitle">Conteúdos atualizados e acesso simplificado em todos os dispositivos</p>
-
-      <div class="big">Filmes, Séries e Canais<br>ao vivo</div>
-
-      <p class="info">Mais de <strong>22.000</strong> filmes, <strong>5.000</strong> séries e <strong>2.000</strong> canais ao vivo, sempre atualizados.<br>
-      Suporte rápido e confiável para qualquer dúvida. Experiência prática, segura e acessível em todos os dispositivos.</p>
-
-      <div class="devices">Disponível na sua TV Smart, Roku, Android TV, TCL, TV Box e Celular</div>
-
-      <div style="margin-top:22px;">
-        <!-- Principal botão "Falar comigo" apontando para seu WhatsApp com a mensagem formal -->
-        <a class="cta"
-           href="https://wa.me/5582987533532?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20seu%20aplicativo.%20Poderia%20me%20informar%20como%20fa%C3%A7o%20para%20acess%C3%A1-lo%3F"
-           target="_blank" rel="noopener noreferrer">
-          ⬇️ Falar comigo!
-        </a>
-      </div>
-    </header>
-
-    <footer>
-      © 2025 Cine Atmos | Todos os direitos reservados
-    </footer>
-  </div>
 </body>
 </html>
