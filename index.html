@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cine Atmos</title>
+    <title>Cine Atmos – Filmes e Séries</title>
     <style>
-        /* Reset básico e fontes */
         * {
             margin: 0;
             padding: 0;
@@ -13,101 +12,102 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
-        /* Fundo escuro com degradê suave no final */
         body {
-            background: linear-gradient(180deg, #0a0a0a 0%, #121212 80%, #1a1a1a 100%);
+            background-color: #0a0a0a;
             color: #ffffff;
             display: flex;
             justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 20px 20px 100px 20px; /* Espaço no fundo para o botão fixo */
         }
 
-        /* Container centralizado do site */
         .container {
             width: 100%;
             max-width: 450px;
             text-align: center;
-            padding: 20px;
         }
 
-        /* Títulos principais em Verde */
-        .title-primary {
-            color: #2ecc71;
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .subtitle-top {
+            color: #aaaaaa;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-bottom: 40px;
         }
 
-        .title-secondary {
+        .title-main {
             color: #2ecc71;
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: bold;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             line-height: 1.3;
         }
 
-        /* Textos de apoio e descrições */
-        .subtitle {
+        .text-gray {
             color: #aaaaaa;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.5;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .description {
-            color: #ffffff;
-            font-size: 1.15rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        /* Destaques em verde dentro do texto */
-        .highlight {
+        .highlight-green {
             color: #2ecc71;
             font-weight: bold;
         }
 
-        .sub-highlight {
-            color: #2ecc71;
+        .text-soccer {
             font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 8px;
+            color: #ffffff;
+            margin-top: 25px;
+            margin-bottom: 25px;
         }
 
-        /* Botão do WhatsApp Estilo image_3.png com brilho */
+        .text-features {
+            color: #dddddd;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .text-devices {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .footer-credits {
+            color: #444444;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        /* Botão Fixo no fundo - Igual ao da image_6.png */
+        .fixed-btn-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(0deg, #0a0a0a 70%, rgba(10,10,10,0) 100%);
+            padding: 15px 20px 25px 20px;
+            display: flex;
+            justify-content: center;
+            z-index: 999;
+        }
+
         .btn-whatsapp {
             display: block;
-            background-color: #1ed760; /* Verde bem vivo */
-            color: #000000; /* Texto escuro para dar contraste e leitura */
-            font-size: 1.3rem;
+            background-color: #1ed760;
+            color: #000000;
+            font-size: 1.25rem;
             font-weight: bold;
             text-decoration: none;
-            padding: 16px 30px;
-            border-radius: 50px;
-            margin: 40px auto 20px auto;
+            padding: 16px;
+            border-radius: 18px;
             width: 100%;
-            max-width: 340px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            /* Efeito de brilho neon verde igual ao da foto */
-            box-shadow: 0 0 25px rgba(30, 215, 96, 0.5);
-        }
-
-        /* Efeito de clique rápido no celular */
-        .btn-whatsapp:active {
-            transform: scale(0.98);
-            box-shadow: 0 0 15px rgba(30, 215, 96, 0.7);
-        }
-
-        /* Rodapé de suporte */
-        .footer-text {
-            color: #666666;
-            font-size: 0.95rem;
-            line-height: 1.4;
-            margin-top: 15px;
-            padding: 0 10px;
+            max-width: 410px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(30, 215, 96, 0.3);
         }
     </style>
 </head>
@@ -115,36 +115,10 @@
 
     <div class="container">
         
-        <!-- Bloco 1: Cabeçalho -->
-        <h1 class="title-primary">Cine Atmos</h1>
-        <p class="subtitle">Conteúdos atualizados e acesso simplificado em todos os dispositivos</p>
+        <p class="subtitle-top">simplificado<br>em todos os dispositivos</p>
 
-        <!-- Bloco 2: Chamada de Conteúdo -->
-        <h2 class="title-secondary">Filmes, Séries e<br>Canais ao vivo</h2>
+        <h1 class="title-main">Filmes, Séries e<br>Canais ao vivo</h1>
         
-        <p class="description">
-            Mais de <span class="highlight">22.000 filmes</span>, <span class="highlight">5.000 séries</span><br>
-            e <span class="highlight">2.000 canais ao vivo</span>, todos sempre atualizados.
-        </p>
-
-        <p class="sub-highlight">Todas as séries e filmes atualizados,</p>
-        <p class="subtitle">lançamentos e clássicos.</p>
-
-        <!-- Botão de Ação Configurado para o TikTok não bugar -->
-        <a href="whatsapp://send?phone=5582987533532&text=Olá!%20Gostaria%20de%20solicitar%20um%20teste%20grátis%20no%20Cine%20Atmos" class="btn-whatsapp">
-    Falar comigo aqui!
-</a>
-    Falar comigo aqui!
-</a>
-    Falar comigo aqui!
-</a>
-            Falar comigo aqui!
-        </a>
-
-        <!-- Texto de suporte final -->
-        <p class="footer-text">Suporte rápido e confiável para uma Experiência prática e segura.</p>
-
-    </div>
-
-</body>
-</html>
+        <p class="text-gray">
+            Mais de <span class="highlight-green">22.000 filmes</span>, <span class="highlight-green">5.000 séries</span> e<br>
+            <span class="highlight-green">
