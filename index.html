@@ -5,19 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cine Atmos</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #111; color: #fff; margin: 0; padding: 0; }
-        .container { margin: 18px auto; padding: 18px 14px; }
-        .wa-top { display: inline-block; background-color: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        /* Reset básico e fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Fundo escuro com leve degradê conforme o original */
+        body {
+            background: linear-gradient(180deg, #0f1112 0%, #070809 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Container principal limitado para estilo mobile */
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* Títulos principais em Verde */
+        .brand-title {
+            color: #1ed760;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            color: #1ed760;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-top: 40px;
+            margin-bottom: 25px;
+        }
+
+        /* Textos de apoio e descrições */
+        .subtitle {
+            color: #a0a5a8;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .highlight-text {
+            color: #e2e8f0;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Destaques numéricos em verde dentro do texto */
+        .green-number {
+            color: #1ed760;
+            font-weight: 700;
+        }
+
+        .sub-highlight {
+            color: #1ed760;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .sub-text-muted {
+            color: #71767a;
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+        }
+
+        /* Botão com a luzinha brilhando (Animação de Pulso Glow) */
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: #1ecb5d;
+            color: #000000;
+            text-decoration: none;
+            padding: 18px 20px;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 35px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            
+            /* Efeito da luzinha pulsando */
+            animation: luzinha-brilhando 2s infinite ease-in-out;
+        }
+
+        /* Definição do efeito da luzinha brilhando em volta do botão */
+        @keyframes luzinha-brilhando {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(30, 203, 93, 0.7);
+            }
+            50% {
+                transform: scale(1.01);
+                box-shadow: 0 0 18px 6px rgba(30, 203, 93, 0.5);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(30, 203, 93, 0);
+            }
+        }
+
+        /* Efeito ao passar o mouse ou tocar */
+        .cta-button:hover {
+            background-color: #1af26a;
+            box-shadow: 0 0 22px 10px rgba(30, 203, 93, 0.6);
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Rodapé / Suporte */
+        .footer-text {
+            color: #565b5f;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            padding: 0 15px;
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="topbar">
-            <!-- Top WhatsApp quick link (abre o WhatsApp) -->
-            <a class="wa-top" href="https://wa.me/5582987533532?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20teste%20gr%C3%A1tis%20no%20Cine%20Atmos" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
-                WhatsApp
-            </a>
-        </div>
+        <h1 class="brand-title">Cine Atmos</h1>
+        <p class="subtitle">Conteúdos atualizados e acesso simplificado em todos os dispositivos</p>
+
+        <h2 class="section-title">Filmes, Séries e<br>Canais ao vivo</h2>
+        
+        <p class="highlight-text">
+            Mais de <span class="green-number">22.000 filmes</span>, 
+            <span class="green-number">5.000 séries</span> e 
+            <span class="green-number">2.000 canais ao vivo</span>, todos sempre atualizados.
+        </p>
+
+        <p class="sub-highlight">Todas as séries e filmes atualizados,</p>
+        <p class="sub-text-muted">lançamentos e clássicos.</p>
+
+        <!-- Botão com seu número correto e sua nova mensagem automática -->
+        <a href="https://api.whatsapp.com/send?phone=5582987533532&text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20teste%20gr%C3%A1tis%20no%20Cine%20Atmos" class="cta-button" target="_blank">
+            Falar comigo aqui!
+        </a>
+
+        <!-- Rodapé corrigido -->
+        <p class="footer-text">
+            Suporte rápido e confiável para uma Experiência prática e segura.
+        </p>
     </div>
+
 </body>
 </html>
