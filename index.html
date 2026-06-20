@@ -10,158 +10,134 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
-        /* Fundo escuro com leve degradê conforme o original */
+        /* Fundo escuro com degradê suave no final */
         body {
-            background: linear-gradient(180deg, #0f1112 0%, #070809 100%);
+            background: linear-gradient(180deg, #0a0a0a 0%, #121212 80%, #1a1a1a 100%);
             color: #ffffff;
-            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             padding: 20px;
         }
 
-        /* Container principal limitado para estilo mobile */
+        /* Container centralizado do site */
         .container {
             width: 100%;
             max-width: 450px;
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
         /* Títulos principais em Verde */
-        .brand-title {
-            color: #1ed760;
+        .title-primary {
+            color: #2ecc71;
             font-size: 2.2rem;
-            font-weight: 700;
+            font-weight: bold;
             margin-bottom: 15px;
         }
 
-        .section-title {
-            color: #1ed760;
+        .title-secondary {
+            color: #2ecc71;
             font-size: 1.8rem;
-            font-weight: 700;
-            line-height: 1.3;
+            font-weight: bold;
             margin-top: 40px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            line-height: 1.3;
         }
 
         /* Textos de apoio e descrições */
         .subtitle {
-            color: #a0a5a8;
+            color: #aaaaaa;
             font-size: 1.1rem;
             line-height: 1.5;
-            font-weight: 400;
+            margin-bottom: 25px;
         }
 
-        .highlight-text {
-            color: #e2e8f0;
+        .description {
+            color: #ffffff;
             font-size: 1.15rem;
             line-height: 1.6;
             margin-bottom: 25px;
         }
 
-        /* Destaques numéricos em verde dentro do texto */
-        .green-number {
-            color: #1ed760;
-            font-weight: 700;
+        /* Destaques em verde dentro do texto */
+        .highlight {
+            color: #2ecc71;
+            font-weight: bold;
         }
 
         .sub-highlight {
-            color: #1ed760;
-            font-weight: 600;
+            color: #2ecc71;
             font-size: 1.1rem;
+            font-weight: 500;
             margin-bottom: 8px;
         }
 
-        .sub-text-muted {
-            color: #71767a;
-            font-size: 1.05rem;
-            margin-bottom: 40px;
-        }
-
-        /* Botão com a luzinha brilhando (Animação de Pulso Glow) */
-        .cta-button {
+        /* Botão do WhatsApp Estilo image_3.png com brilho */
+        .btn-whatsapp {
             display: block;
-            width: 100%;
-            background-color: #1ecb5d;
-            color: #000000;
-            text-decoration: none;
-            padding: 18px 20px;
-            border-radius: 30px;
+            background-color: #1ed760; /* Verde bem vivo */
+            color: #000000; /* Texto escuro para dar contraste e leitura */
             font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 35px;
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            
-            /* Efeito da luzinha pulsando */
-            animation: luzinha-brilhando 2s infinite ease-in-out;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: 50px;
+            margin: 40px auto 20px auto;
+            width: 100%;
+            max-width: 340px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            /* Efeito de brilho neon verde igual ao da foto */
+            box-shadow: 0 0 25px rgba(30, 215, 96, 0.5);
         }
 
-        /* Definição do efeito da luzinha brilhando em volta do botão */
-        @keyframes luzinha-brilhando {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(30, 203, 93, 0.7);
-            }
-            50% {
-                transform: scale(1.01);
-                box-shadow: 0 0 18px 6px rgba(30, 203, 93, 0.5);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(30, 203, 93, 0);
-            }
-        }
-
-        /* Efeito ao passar o mouse ou tocar */
-        .cta-button:hover {
-            background-color: #1af26a;
-            box-shadow: 0 0 22px 10px rgba(30, 203, 93, 0.6);
-        }
-
-        .cta-button:active {
+        /* Efeito de clique rápido no celular */
+        .btn-whatsapp:active {
             transform: scale(0.98);
+            box-shadow: 0 0 15px rgba(30, 215, 96, 0.7);
         }
 
-        /* Rodapé / Suporte */
+        /* Rodapé de suporte */
         .footer-text {
-            color: #565b5f;
+            color: #666666;
             font-size: 0.95rem;
-            line-height: 1.5;
-            padding: 0 15px;
+            line-height: 1.4;
+            margin-top: 15px;
+            padding: 0 10px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1 class="brand-title">Cine Atmos</h1>
+        
+        <!-- Bloco 1: Cabeçalho -->
+        <h1 class="title-primary">Cine Atmos</h1>
         <p class="subtitle">Conteúdos atualizados e acesso simplificado em todos os dispositivos</p>
 
-        <h2 class="section-title">Filmes, Séries e<br>Canais ao vivo</h2>
+        <!-- Bloco 2: Chamada de Conteúdo -->
+        <h2 class="title-secondary">Filmes, Séries e<br>Canais ao vivo</h2>
         
-        <p class="highlight-text">
-            Mais de <span class="green-number">22.000 filmes</span>, 
-            <span class="green-number">5.000 séries</span> e 
-            <span class="green-number">2.000 canais ao vivo</span>, todos sempre atualizados.
+        <p class="description">
+            Mais de <span class="highlight">22.000 filmes</span>, <span class="highlight">5.000 séries</span><br>
+            e <span class="highlight">2.000 canais ao vivo</span>, todos sempre atualizados.
         </p>
 
         <p class="sub-highlight">Todas as séries e filmes atualizados,</p>
-        <p class="sub-text-muted">lançamentos e clássicos.</p>
+        <p class="subtitle">lançamentos e clássicos.</p>
 
-        <!-- Botão com seu número correto e sua nova mensagem automática -->
-        <a class="wa-top" href="https://wa.me/5582987533532?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20teste%20gr%C3%A1tis%20no%20Cine%20Atmos" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+        <!-- Botão de Ação Configurado para o TikTok não bugar -->
+        <a href="https://api.whatsapp.com/send?phone=5582987533532&text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20teste%20gr%C3%A1tis%20no%20Cine%20Atmos" class="btn-whatsapp">
             Falar comigo aqui!
         </a>
 
-        <!-- Rodapé corrigido -->
-        <p class="footer-text">
-            Suporte rápido e confiável para uma Experiência prática e segura.
-        </p>
+        <!-- Texto de suporte final -->
+        <p class="footer-text">Suporte rápido e confiável para uma Experiência prática e segura.</p>
+
     </div>
 
 </body>
